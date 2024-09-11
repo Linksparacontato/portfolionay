@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio Nayra Nascimento</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header id="home">
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+        <nav>
+            <div class="logo">
+                <a href="#home">Nayra</a>
+            </div>
+            <ul>
+                <li><a href="#home">início</a></li>
+                <li><a href="#about">Sobre Mim</a></li>
+                <li><a href="#projects">Serviços</a></li>
+                <li><a href="#contact">Contato</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <div class="header-text">
+                <h1>Nayra Nascimento</h1>
+                <p>Desenvolvedora <span> Front End</span></p>
+                <div class="social-icons">
+                    <a href="https://api.whatsapp.com/send?phone=+5589981085858&text=Olá,%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                </div>
+            </div>
+            <div class="header-image">
+                <img src="foguete.png" alt="Imagem da Desenvolvedora">
+            </div>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+    </header>
+    <section id="about" class="about-section">
+        <div class="about-content">
+            <div class="about-image">
+                <img src="minhafoto.jpg" alt="Foto de Nayra">
+            </div>
+            <div class="about-text">
+                <h2>Olá! <span>👋</span></h2>
+                <p>Eu sou Nayra! Trabalho como desenvolvedora front-end, adoro criar sites. Se você precisa de alguém para transformar ideias em soluções digitais, conte comigo.</p>
+            </div>
+        </div>
+    </section>
+    <section id="skills" class="skills-section">
+        <h2>Habilidades</h2>
+        <div class="skills-container">
+            <div class="skill-card">
+                <div class="icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3>HTML</h3>
+                <p>Criação de estrutura semântica e acessível para websites.</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3>CSS</h3>
+                <p>Estilização de interfaces com design responsivo e moderno.</p>
+            </div>
+            <div class="skill-card">
+                <div class="icon">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <h3>JavaScript</h3>
+                <p>Desenvolvimento de funcionalidades interativas e dinâmicas.</p>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Serviços</h2>
+        <div class="project-tabs">
+            <button class="tab-button active" data-tab="1">1</button>
+            <button class="tab-button" data-tab="2">2</button>
+        </div>
+        <div class="project-content" id="project-1">
+            <img src="essafoto.png" alt="Project Image">
+            <div class="project-info">
+                <h3>Páginas e Sites</h3>
+                <p>Criação de sites e páginas totalmente personalizadas para atender aos seus objetivos </p>
+                <div class="tech-tags">
+                    <span>Design</span>
+                    <span>Briefing</span>
+                    <span>Copy</span>
+                    <span>Desenvolvimento</span>
+                </div>
+                
+    </section>
+    <section id="contact">
+        <div class="contato">
+            <h1>Contato</h1>
+        </div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="contact-container">
+            <img src="msg.jpg" alt="Contact Image">
+            
+                <form action="https://formsubmit.co/ nayrasanttos15@email.com " method="POST" 
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email" placeholder="Digite seu E-mail" required>
+                <label for="message">Mensagem *</label>
+                <textarea id="message" name="message" placeholder="Digite o Conteúdo do E-mail" required></textarea>
+                <button type="submit">Enviar</button>
+                <input type="hidden" name="subject" value="Novo">
+                <input type="text" name="honey" style="display:none">
+                <input type="hidden" name="captcha" value="false">
+            </form>
+            
+
+        </div>
+    </section>
+
+    <script src="script.js"></script>  
+     <footer></footer>
+        <p>© 2024 Nayra Nascimento. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

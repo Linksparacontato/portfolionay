@@ -1,0 +1,630 @@
+/* Paleta de Cores */
+:root {
+  --primary-color: #6a0572;
+  --secondary-color: #000000;
+  --accent-color: #ffffff;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  line-height: 1.6;
+}
+/* Paleta de Cores */
+:root {
+  --primary-color: #6a0572;
+  --secondary-color: #000000;
+  --accent-color: #ffffff;
+}
+
+/* Reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos Globais */
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+  line-height: 1.6;
+}
+
+/* Botão Hamburguer */
+.menu-btn {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+}
+
+.menu-btn-burger {
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.menu-btn-burger::before,
+.menu-btn-burger::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.menu-btn-burger::before {
+  transform: translateY(-8px);
+}
+
+.menu-btn-burger::after {
+  transform: translateY(8px);
+}
+
+/* Menu oculto */
+.nav-menu {
+  display: none;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #4B0082;
+  padding: 20px;
+  width: 200px;
+  border-radius: 5px;
+}
+
+/* Navegação */
+@media (max-width: 768px) {
+  /* A barra de navegação será oculta inicialmente no mobile */
+  nav ul {
+      display: none;
+      flex-direction: column;
+      background-color: #800080;
+      position: absolute;
+      top: 50px;
+      right: 0;
+      width: 100%;
+  }
+
+  /* Exibir a barra de navegação quando o botão de menu for clicado */
+  nav.active ul {
+      display: flex;
+  }
+
+  /* Estilos para o botão "hamburger" no mobile */
+  .menu-btn {
+      display: block;
+      background-color: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 30px;
+      color: white;
+  }
+
+  /* Ajustes para o conteúdo central */
+  .content {
+      padding: 20px;
+      text-align: center;
+  }
+
+  /* Ajustes no tamanho da imagem/ilustração */
+  .illustration img {
+      max-width: 100%;
+      height: auto;
+  }
+}
+
+/* Estilos específicos para o botão "hamburger" */
+.menu-btn {
+  display: none;
+}
+
+/* Exibir o botão "hamburger" apenas em telas menores */
+@media (max-width: 768px) {
+  .menu-btn {
+      display: block;
+  }
+}
+
+nav {
+  border-radius: 30px;
+  top: 0;
+  width: 100%;
+  background-color: rgba(70, 4, 65, 0.63);
+  display: flex;
+  justify-content: space-between;
+  align-items: center center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  transition: background-color 0.3s;
+}
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+nav .logo a {
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+/* Cabeçalho */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.header-text h1 {
+  font-size: 3rem;
+  color: var(--primary-color);
+}
+
+.header-text p {
+  font-size: 1.5rem;
+}
+
+.header-text span {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.social-icons {
+  margin-top: 1rem;
+}
+
+.social-icons a {
+  color: var(--accent-color);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 2px solid var(--accent-color);
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.social-icons a:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+
+/* Imagem do Cabeçalho */
+.header-image img {
+  margin-top: 2rem;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .header-content {
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .header-text {
+      text-align: left;
+  }
+}
+
+
+
+
+/* Seção Sobre Mim */
+.about-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+  color: var(--secondary-color);
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  margin-bottom: 2rem;
+}
+
+.about-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.about-text .btn {
+  color: var(--primary-color);
+  text-decoration: none;
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.about-text .btn:hover {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .about-content {
+      flex-direction: row;
+      text-align: left;
+  }
+
+  .about-image {
+      margin-right: 2rem;
+  }
+}
+/* Seção de Habilidades */
+.skills-section {
+  padding: 4rem 2rem;
+  background-color: var(--accent-color);
+  text-align: center;
+}
+
+.skills-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.skill-card {
+  background-color: var(--secondary-color);
+  padding: 2rem;
+  border-radius: 10px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.skill-card .icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.skill-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+.skill-card p {
+  font-size: 1rem;
+  color: var(--primary-color);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .skills-container {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header h1 {
+  font-size: 24px;
+  color: #9b59b6;
+}
+
+#projects {
+  padding: 40px;
+  background-color: #222;
+}
+
+#projects h2 {
+  font-size: 32px;
+  color: #9b59b6;
+  text-align: center;
+}
+
+.project-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.tab-button {
+  background-color: #444;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.tab-button.active {
+  background-color: #9b59b6;
+}
+
+.project-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.project-content img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.project-info {
+  max-width: 500px;
+}
+
+.project-info h3 {
+  color: #9b59b6;
+  font-size: 28px;
+}
+
+.project-info p {
+  font-size: 18px;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.tech-tags span {
+  background-color: #9b59b6;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.more-info {
+  background-color: #9b59b6;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+.more-info:hover {
+  background-color: #8e44ad;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .project-content {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .project-info {
+      max-width: 100%;
+  }
+}
+/* Estilos anteriores... */
+
+#contact {
+  padding: 40px;
+  background-color: #333;
+}
+.contato {
+  font-size: 25px;
+  color: #9b59b6;
+  text-align: center;
+}
+
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  background-color:  #a192d5;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.contact-container img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: #ffffff96;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+form label {
+  color: #07000079;
+  font-size: 16px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: none;
+  font-size: 16px;
+  width: 100%;
+}
+
+form input[type="email"], form input[type="text"], form textarea {
+  background-color: #eee7e7;
+  color: #0e0000cb;
+}
+
+form button {
+  background-color: #9b59b6;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  color: #ffffff;
+  font-size: 16px;
+  border-radius: 5px;
+}
+
+form button:hover {
+  background-color: #8e44ad;
+}
+
+@media (max-width: 768px) {
+  .project-content, .contact-container {
+      flex-direction: column;
+      text-align: center;
+  }
+  
+  .project-info, form {
+      max-width: 100%;
+  }
+}
+
+
+/* Estilo de fundo com partículas */
+@keyframes particle {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-100vh);
+  }
+}
+
+.particle {
+  position: absolute;
+  top: 100vh;
+  width: 10px;
+  height: 10px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  animation: particle 10s linear infinite;
+}
+
+.particle:nth-child(2) {
+  left: 20%;
+  width: 15px;
+  height: 15px;
+  animation-duration: 12s;
+}
+
+.particle:nth-child(3) {
+  left: 40%;
+  width: 7px;
+  height: 7px;
+  animation-duration: 8s;
+}
+
+.particle:nth-child(4) {
+  left: 60%;
+  width: 12px;
+  height: 12px;
+  animation-duration: 15s;
+}
+
+.particle:nth-child(5) {
+  left: 80%;
+  width: 5px;
+  height: 5px;
+  animation-duration: 10s;}
